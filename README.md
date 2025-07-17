@@ -7,6 +7,51 @@
                         
 
 
+---
+
+## 🌐 Deployment on Render
+
+This project can be deployed on [Render](https://render.com/). Follow these steps for a smooth deployment:
+
+1. **Ensure React and ReactDOM are dependencies**
+   - In `client/package.json`:
+     ```json
+     "dependencies": {
+       "react": "^18.0.0",
+       "react-dom": "^18.0.0",
+       "react-router-dom": "^7.7.0"
+     }
+     ```
+   - If missing, run:
+     ```sh
+     cd client
+     npm install react@latest react-dom@latest react-router-dom@latest
+     ```
+
+2. **Use npm and package-lock.json**
+   - Render prefers `npm` and `package-lock.json` over `yarn`.
+   - If you have a `yarn.lock` file in `client/`, delete it:
+     ```sh
+     rm client/yarn.lock
+     ```
+
+3. **Specify Node.js version**
+   - In your root `package.json`, add (if not present):
+     ```json
+     "engines": {
+       "node": "18.x"
+     }
+     ```
+   - Or set the Node version in Render's settings.
+
+4. **Set environment variables on Render**
+   - Add your backend and frontend `.env` variables in the Render dashboard.
+
+5. **Deploy**
+   - Connect your GitHub repo to Render and deploy both the backend and frontend as separate web services.
+
+---
+
 A full-stack blog application built with the MERN stack (MongoDB, Express.js, React.js, Node.js). This project demonstrates seamless integration between front-end and back-end, including database operations, API communication, and state management.
 
 ---
