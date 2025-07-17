@@ -2,16 +2,13 @@
 
 ## 🚀 Live Demo
 
-[View the live app here]:(http://localhost:5178/)
-                        :(http://localhost:5000/)
-                        
-
+[View the live app here](https://your-live-app-url.com)
 
 ---
 
-## 🌐 Deployment on Render
+## 🌐 Deployment on Netlify
 
-This project can be deployed on [Render](https://render.com/). Follow these steps for a smooth deployment:
+This project can be deployed on [Netlify](https://www.netlify.com/). Follow these steps for a smooth deployment:
 
 1. **Ensure React and ReactDOM are dependencies**
    - In `client/package.json`:
@@ -29,26 +26,21 @@ This project can be deployed on [Render](https://render.com/). Follow these step
      ```
 
 2. **Use npm and package-lock.json**
-   - Render prefers `npm` and `package-lock.json` over `yarn`.
+   - Netlify prefers `npm` and `package-lock.json`.
    - If you have a `yarn.lock` file in `client/`, delete it:
      ```sh
      rm client/yarn.lock
      ```
 
-3. **Specify Node.js version**
-   - In your root `package.json`, add (if not present):
-     ```json
-     "engines": {
-       "node": "18.x"
-     }
-     ```
-   - Or set the Node version in Render's settings.
+3. **Set the build command and publish directory in Netlify**
+   - **Build command:** `npm run build`
+   - **Publish directory:** `dist`
 
-4. **Set environment variables on Render**
-   - Add your backend and frontend `.env` variables in the Render dashboard.
+4. **Set environment variables on Netlify**
+   - Add your frontend `.env` variables (e.g., `VITE_API_URL`) in the Netlify dashboard.
 
 5. **Deploy**
-   - Connect your GitHub repo to Render and deploy both the backend and frontend as separate web services.
+   - Connect your GitHub repo to Netlify and deploy the `client` folder as a site.
 
 ---
 
