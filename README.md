@@ -2,7 +2,10 @@
 
 ## 🚀 Live Demo
 
-[View the live app here](https://your-live-app-url.com)
+[View the live app here]:(http://localhost:5178/)
+                        :(http://localhost:5000/)
+                        
+
 
 A full-stack blog application built with the MERN stack (MongoDB, Express.js, React.js, Node.js). This project demonstrates seamless integration between front-end and back-end, including database operations, API communication, and state management.
 
